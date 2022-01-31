@@ -22,8 +22,14 @@ nav > span {
 }
 
 .interactive-msg {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  display: flex;
   word-wrap: wrap;
   flex-direction: column;
-  align-content: center;
+  text-align: center;
 }
 
+.bold {
+  font-weight: 600;
+}
