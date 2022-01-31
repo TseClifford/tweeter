@@ -6,7 +6,9 @@
  */
 
 html {
-  font-family: sans-serif; /* 1 */
+  font-family: 'Bungee', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
