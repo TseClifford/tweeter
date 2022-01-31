@@ -4,6 +4,7 @@
  * Do not modify these two selectors, please
  */
 html {
+  font-family: 'Source Sans Pro', sans-serif;
   box-sizing: border-box;
 }
 *, *:before, *:after {
@@ -23,3 +24,8 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+nav {
+  font-family: 'Bungee', cursive;
+  font-weight: 400;
+}
