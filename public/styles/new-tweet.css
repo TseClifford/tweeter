@@ -1,14 +1,13 @@
-main {
+.new-tweet {
   margin: 0% 5%;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   align-content: center;
-  align-items: center;
   padding: 5px;
 }
 
-main div {
+.new-tweet div {
   font-family: 'Bungee', cursive;
   display: flex;
   flex-direction: row;
