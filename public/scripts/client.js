@@ -25,6 +25,7 @@ const data = [
   }
 ]
 
+// Append tweets to tweet-container from tweet array
 const renderTweets = (tweetsArr) => {
   $.each(tweetsArr, (tweet) => {
     let newTweet = createTweetElement(tweetsArr[tweet])
@@ -32,6 +33,7 @@ const renderTweets = (tweetsArr) => {
   })
 }
 
+// Create new article for each tweet
 const createTweetElement = (tweet) => {
   const $tweet = $(`<article class='tweet'></article>`);
 
@@ -57,6 +59,7 @@ const createTweetElement = (tweet) => {
   return $tweet
 }
 
+// Load render tweet when document ready
 $(() => {
   renderTweets(data);
 });
