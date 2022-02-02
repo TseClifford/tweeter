@@ -24,3 +24,12 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+  margin: 0% 5%;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 2rem 0.25rem;
+}
