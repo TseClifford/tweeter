@@ -23,15 +23,15 @@ const data = [
     },
     "created_at": 1461113959088
   }
-]
+];
 
 // Append tweets to tweet-container from tweet array
 const renderTweets = (tweetsArr) => {
   $.each(tweetsArr, (tweet) => {
-    let newTweet = createTweetElement(tweetsArr[tweet])
-    $(".tweet-container").append(newTweet)
-  })
-}
+    let newTweet = createTweetElement(tweetsArr[tweet]);
+    $(".tweet-container").append(newTweet);
+  });
+};
 
 // Create new article for each tweet
 const createTweetElement = (tweet) => {
@@ -55,11 +55,17 @@ const createTweetElement = (tweet) => {
         </div>
       </footer>
       `
-  )
-  return $tweet
-}
+  );
+  return $tweet;
+};
 
 // Load render tweet when document ready
 $(() => {
   renderTweets(data);
+
+  $("form").on("submit", (event) => {
+    event.preventDefault();
+
+    $.ajax({ url: "/tweets", method: "POST", data: $("form").serialize() });
+  });
 });
