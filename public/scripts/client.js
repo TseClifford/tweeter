@@ -65,13 +65,26 @@ const loadTweets = () => {
     .then((data) => renderTweets(data));
 };
 
-// Load when document ready
-$(() => {
-  loadTweets();
-
+// Tweet submission and validation
+const submitTweet = () => {
   $("form").on("submit", (event) => {
     event.preventDefault();
 
-    $.ajax({ url: "/tweets", method: "POST", data: $("form").serialize() });
+    const tweetLength = $("#tweet-text").val().length;
+    if (tweetLength === 0) {
+      alert("Your response cannot be empty.");
+
+    } else if (tweetLength > 140) {
+      alert("You have exceeded the maximum character limit.");
+
+    } else {
+      $.ajax({ url: "/tweets", method: "POST", data: $("form").serialize() });
+    }
   });
+};
+
+// Load when document ready
+$(() => {
+  loadTweets();
+  submitTweet();
 });
