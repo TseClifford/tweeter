@@ -29,7 +29,7 @@
 const renderTweets = (tweetsArr) => {
   $.each(tweetsArr, (tweet) => {
     let newTweet = createTweetElement(tweetsArr[tweet]);
-    $(".tweet-container").append(newTweet);
+    $(".tweet-container").prepend(newTweet);
   });
 };
 
@@ -69,8 +69,8 @@ const loadTweets = () => {
 const submitTweet = () => {
   $("form").on("submit", (event) => {
     event.preventDefault();
-
     const tweetLength = $("#tweet-text").val().length;
+    
     if (tweetLength === 0) {
       alert("Your response cannot be empty.");
 
@@ -78,7 +78,12 @@ const submitTweet = () => {
       alert("You have exceeded the maximum character limit.");
 
     } else {
-      $.ajax({ url: "/tweets", method: "POST", data: $("form").serialize() });
+      $.ajax({ url: "/tweets", method: "POST", data: $("form").serialize() })
+        .then(() => {
+          $(".tweet-container").empty();
+          $("#tweet-text").val('');
+          loadTweets();
+        });
     }
   });
 };
