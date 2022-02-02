@@ -26,10 +26,9 @@ const data = [
 ]
 
 const renderTweets = (tweetsArr) => {
-  $(() => {
-    $.each(tweetsArr, (tweet) => {
-      $(".tweet-container").append(createTweetElement(tweetsArr[tweet]))
-    })
+  $.each(tweetsArr, (tweet) => {
+    let newTweet = createTweetElement(tweetsArr[tweet])
+    $(".tweet-container").append(newTweet)
   })
 }
 
@@ -58,4 +57,6 @@ const createTweetElement = (tweet) => {
   return $tweet
 }
 
-renderTweets(data);
+$(() => {
+  renderTweets(data);
+});
