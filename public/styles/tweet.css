@@ -1,6 +1,6 @@
 article.tweet {
   border: solid #545149 5px;
-  margin: 0;
+  margin: 1em 0em;
   padding: 0.5em;
 }
 
@@ -28,7 +28,7 @@ article.tweet .tweet-header span {
 }
 
 article.tweet .tweet-msg {
-  padding: 0em 1em;
+  padding: 0em 1em 1em;
   border-bottom: solid #545149 5px;
 }
 
