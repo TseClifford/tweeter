@@ -25,6 +25,12 @@
 //   }
 // ];
 
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 // Append tweets to tweet-container from tweet array
 const renderTweets = (tweetsArr) => {
   $.each(tweetsArr, (tweet) => {
@@ -44,7 +50,7 @@ const createTweetElement = (tweet) => {
         <span>${tweet.user.handle}</span>
         </header>
         <div class="tweet-msg">
-        <a>${tweet.content.text}</a>
+        <a>${escape(tweet.content.text)}</a>
         </div>
         <footer>
         <a>${timeago.format(tweet.created_at)}</a>
