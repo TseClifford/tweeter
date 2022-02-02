@@ -70,7 +70,7 @@ const submitTweet = () => {
   $("form").on("submit", (event) => {
     event.preventDefault();
     const tweetLength = $("#tweet-text").val().length;
-    
+
     if (tweetLength === 0) {
       alert("Your response cannot be empty.");
 
@@ -88,8 +88,11 @@ const submitTweet = () => {
   });
 };
 
-// Load when document ready
+$("button").hover(() => $(this).toggleClass("button:hover"));
+$("article.tweet").hover(() => $(this).toggleClass("article.tweet:hover"));
+submitTweet();
+
+// Initial load when document ready
 $(() => {
   loadTweets();
-  submitTweet();
 });

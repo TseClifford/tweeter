@@ -4,6 +4,10 @@ article.tweet {
   padding: 0.5em;
 }
 
+article.tweet:hover {
+  box-shadow: 6px 6px 2px 1px #c5cae6;
+}
+
 article.tweet .tweet-header {
   font-weight: 300;
   display: flex;

@@ -37,6 +37,14 @@ button {
   border: 0;
 }
 
+button:hover {
+  border-radius: 1px;
+  outline-color: #638ff7;
+  outline-style: solid;
+  outline-width: medium;
+  outline-offset: 1px;
+}
+
 .red {
   color:red
 }

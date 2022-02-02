@@ -35,3 +35,7 @@ nav > span {
 .bold {
   font-weight: 600;
 }
+
+.fa-solid {
+  color: red
+}
