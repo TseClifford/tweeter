@@ -31,5 +31,5 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
-  padding: 2rem 0.25rem;
+  padding: 0rem 0.25rem 2rem;
 }

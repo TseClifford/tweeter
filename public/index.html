@@ -36,13 +36,23 @@
       </div>
       <br>
       <div>
-          <h2>Your Name</h2>
+          <h2>FirstName LastName</h2>
       </div>
   </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="error" id="no-text">
+          <i class="fa-solid fa-circle-exclamation">   </i>
+          <a>Oh no, looks like you did not enter anything. Please try again.</a>
+          <i class="fa-solid fa-circle-exclamation">   </i>
+        </div>
+        <div class="error" id="long-text">
+          <i class="fa-solid fa-circle-exclamation">   </i>
+          <a>Oh no, looks like you exceeded the character limit. Please try again.</a>
+          <i class="fa-solid fa-circle-exclamation">   </i>
+        </div>
         <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>

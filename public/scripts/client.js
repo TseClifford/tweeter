@@ -75,13 +75,14 @@ const loadTweets = () => {
 const submitTweet = () => {
   $("form").on("submit", (event) => {
     event.preventDefault();
+    $(".error").slideUp("slow", () => { });
     const tweetLength = $("#tweet-text").val().length;
 
     if (tweetLength === 0) {
-      alert("Your response cannot be empty.");
+      $("#no-text").slideDown("slow", () => { });
 
     } else if (tweetLength > 140) {
-      alert("You have exceeded the maximum character limit.");
+      $("#long-text").slideDown("slow", () => { });
 
     } else {
       $.ajax({ url: "/tweets", method: "POST", data: $("form").serialize() })
