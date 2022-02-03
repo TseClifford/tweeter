@@ -99,6 +99,8 @@ const submitTweet = () => {
 const toggleNewTweet = () => {
   $(".interactive-msg").on("click", () => {
     $(".new-tweet").slideToggle();
+    $("#tweet-text").val("");
+    $("#tweet-text").focus();
   });
 };
 

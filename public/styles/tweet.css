@@ -21,7 +21,7 @@ article.tweet .tweet-header div {
   align-items: center;
 }
 
- article.tweet .tweet-header img {
+article.tweet .tweet-header img {
   margin-right: 0.5em;
   width: 2em;
 }

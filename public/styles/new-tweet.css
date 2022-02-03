@@ -15,6 +15,7 @@
   font-size: 1em;
   margin: 10px 0px;
 }
+
 .new-tweet form {
   padding-top: 2em;
 }
@@ -62,5 +63,5 @@ button:hover {
 }
 
 .red {
-  color:red
+  color: red
 }
