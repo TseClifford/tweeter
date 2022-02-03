@@ -4,6 +4,7 @@
   align-content: center;
   padding: 0.5em;
   margin-bottom: 0.5em;
+  display: none;
 }
 
 .new-tweet div {

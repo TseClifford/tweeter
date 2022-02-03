@@ -95,11 +95,19 @@ const submitTweet = () => {
   });
 };
 
-$("button").hover(() => $(this).toggleClass("button:hover"));
-$("article.tweet").hover(() => $(this).toggleClass("article.tweet:hover"));
-submitTweet();
+// Stretch: Toggle new-tweet div with navbar click
+const toggleNewTweet = () => {
+  $(".interactive-msg").on("click", () => {
+    $(".new-tweet").slideToggle();
+  });
+};
 
 // Initial load when document ready
 $(() => {
   loadTweets();
+  submitTweet();
+  toggleNewTweet();
+  $(".fa-angles-down").hover(() => $(this).toggleClass(".fa-angles-down:hover"));
+  $("button").hover(() => $(this).toggleClass("button:hover"));
+  $("article.tweet").hover(() => $(this).toggleClass("article.tweet:hover"));
 });

@@ -36,6 +36,19 @@ nav > span {
   font-weight: 600;
 }
 
-.fa-solid {
-  color: red
+.fa-angles-down {
+  color: red;
+  animation: updown;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.fa-angles-down:hover {
+  color: white
+}
+
+@keyframes updown {
+  0%   { transform: translateY(0%);  }
+  50%  { transform: translateY(50%); }
+  100% { transform: translateY(0%);  }
 }
