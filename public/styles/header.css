@@ -6,5 +6,16 @@
   justify-content: flex-start;
   align-items: center;
   background-image: url("../images/asfalt-light.png");
-  background-color: #eeeeee;
+  background-color: #d69a24;
+  color: white;
+  background-clip: content-box;
+  margin-bottom: 2em;
+}
+
+.profile h2 {
+  text-align: center;
+}
+
+.profile h2 a {
+  font-weight: 300;
 }

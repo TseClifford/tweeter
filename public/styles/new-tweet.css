@@ -16,10 +16,6 @@
   margin: 10px 0px;
 }
 
-.new-tweet form {
-  padding-top: 2em;
-}
-
 .new-tweet div.error {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
@@ -34,7 +30,6 @@
 }
 
 textarea {
-  font-weight: bold;
   color: #545149;
   height: 3rem;
   background-color: transparent;
@@ -44,6 +39,7 @@ textarea {
   line-height: 1em;
   outline: 0;
   resize: none;
+  margin-top: 0.5em;
 }
 
 button {
