@@ -62,6 +62,7 @@ const submitTweet = () => {
         .then(() => {
           $(".tweet-container").empty();
           $("#tweet-text").val('');
+          $(".counter").val('140');
           loadTweets();
         });
     }
