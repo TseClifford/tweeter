@@ -51,11 +51,11 @@ const submitTweet = () => {
     $(".error").slideUp("slow", () => { });
     const tweetLength = $("#tweet-text").val().length;
 
-    if (tweetLength === 0) {
-      $("#no-text").slideDown("slow", () => { });
+    if (!tweetLength) {
+      $("#no-text").slideDown("slow", () => { }).delay(3000).slideUp('slow');
 
     } else if (tweetLength > 140) {
-      $("#long-text").slideDown("slow", () => { });
+      $("#long-text").slideDown("slow", () => { }).delay(3000).slideUp('slow');
 
     } else {
       $.ajax({ url: "/tweets", method: "POST", data: $("form").serialize() })
